@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hafiz High School Management System</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css">
+ <link href="~/Content/style.css" rel="stylesheet" type="text/css">
+
+  <script src="~/Scripts/jquery-1.7.1.js"></script>
+</head>
+<body>
+
+<div class="main">
+<div class="page">
+<div class="header">
+<div class="header-img">
+<h1>Hafiz High School Management System</h1>
+<p>IT Solutions</p>
+</div>
+
+<div class="menu">
+<ul>
+  <li><a href="~/Home/Index">Home</a></li>
+   <li><a href="/Home/page2">Services</a></li>
+  <li><a href="/Home/page4">About Us</a></li>
+  <li><a href="/Home/page5">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="left-panel">
+<div class="left-panel-in">
+    @RenderBody()
+
+<p>&nbsp;</p>
+
+<br>
+</div>
+</div>
+<div class="right-panel">
+<div class="right-panel-in">
+
+<h3>Important Links</h3>
+<ul>
+<div class="fw-text"><p><a target="_blank" href="http://www.pucit.edu.pk">PUCIT<br/></a></p></div> <br>
+
+<div class="fw-text"><p><a target="_blank" href="http://www.pu.edu.pk">Punjab University LHR<br/></a></p></div>
+  
+ <br><div class="fw-text"><p><a target="_blank" href="http://www.gcu.edu.pk">GCU Lahore<br/></a></p></div>
+
+ 
+</ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<img src="~/images/footnote.gif" class="copyright" alt="">
+<p>&copy; Copyright 2014. Designed by <a target="_blank" href="http://www.pucit.edu.pk">pucitians</a>
+<img src="~/images/footnote.gif" class="copyright" alt="">
+</p>
+</div>
+</div>
+</div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts",required:false)
+</body>
+</html>

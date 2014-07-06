@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MvcApplication.Models.Student>
+
+@{
+    ViewBag.Title = "searchallstd";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+
+<form method="post" action="~/Admin/searchaccount">
+ <input type="submit" value="Back" class="btn btn-primary pull-center"/>
+</form>
+
+
+
+
+
+<h2 class="title">Search All Students</h2>
+
+
+<table border="1">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password )
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        
+    </tr>
+}
+
+</table>

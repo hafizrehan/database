@@ -1,0 +1,22 @@
+@{
+    ViewBag.Title = "index";
+}
+
+ @Scripts.Render("~/bundles/jquery")
+
+<script>
+    
+    $(document).ready(function () {
+        $('#but').click(function () {
+            alert("For Good Result of All Functionalities Use Google Chrome\n In FireFox / IE \nAttendance Date Feature May Not Work Properly");
+        });
+    });
+</script>
+<h2 class="title">Welcome to our site</h2>
+<h1 class="title">Recent articles</h1>           
+
+<form action="/Home/page2" name="login" onSubmit="return validate()">
+     <center>   
+ <div> 
+     <input type="submit" id="but" value="   Login    " class="btn btn-primary pull-center" > 
+  </div>  </center>     </form>

@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Addbyadmin";
+    Layout = "~/Views/Shared/_student.cshtml";
+
+}
+
+ <script lang="Javascript" type="text/javascript">
+     function validate() {
+         
+         var z = document.forms["login"]["username"].value;
+         if (z == null || z == "") {
+             alert("username must not empty");
+             return false;
+         } var a = document.forms["login"]["passwd"].value;
+         if (a == null || a == "") {
+             alert("password must not empty");
+             return false;
+         } var b = document.forms["login"]["passwd2"].value;
+         if (b == null || b == "" || a != b) {
+             alert("password does not matched");
+             return false;
+         }
+
+         return true;
+     }
+
+            </script>
+        
+        <script>
+
+            $(document).ready(function () {
+                $('#chk').click(function () {
+                    var s = $('#un').val();
+                    $.getJSON("/Home/checkUsername?un=" + s, function (data) {
+                        if (data == true)
+                            $('#d1').text("Note available try another");
+                        else
+                            $('#d1').text("Available");
+
+                    });
+                });
+
+            });
+
+        </script>
+<h1 class="title">Add New Account</h1><br>
+<form method="post" action="~/Home/admin">
+
+    <input type="submit" value="Back" class="btn btn-primary pull-center"/>
+</form>
+<form method="post" action="/Home/Addaccount1" name="login" onSubmit="return validate()">
+<table>
+    <div>
+<tr><td></td><td></td><td>
+    <input type="radio" name="role" value="teacher" />Teacher
+    <input type="radio" name="role" value="student" checked/>Student</td>
+</tr>
+<tr>
+    <td></td><th>Username</th> <td><input type="text" name="username" id ="un" size="20"></td>
+    <td><button type=button id="chk">Check</button></td>
+    
+</tr></div>
+    <tr><td></td><td></td><td><div id="d1"></div></td></tr>
+   
+
+<tr> <td></td><th>Password </th><td><input type="password" name="passwd" size="20"></td></tr>
+<tr> <td></td><th>Confirm Password</th><td><input type="password" name="passwd2" size="20"></td></tr>
+    
+<tr><td></td><td><input type="radio" name="gender" value="male" checked>Male</td><td></td><td><input type="radio" name="status" value="single" checked>Single</td></tr>
+<tr><td></td><td><input type="radio" name="gender" value="female">Female</td><td></td><td><input type="radio" name="status" value="married">Married</td></tr>
+
+<tr><td></td><td></td><th>Select Country</th></tr>
+<tr><td></td><td></td><td>
+    <select name="Country">
+  <option  value="paksitan" selected>Paksitan</option>
+  <option  value="uae">UAE</option>
+  <option value="usa">USA</option>
+  <option  value="china">China</option>
+</select></td></tr>
+<tr><td></td><td></td><td></td><td><input type="submit" value="Add" class="btn btn-primary pull-center"/>
+
+</td></tr></table></form>
+
+<br>

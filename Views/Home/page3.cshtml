@@ -1,0 +1,86 @@
+   @{ Layout = "~/Views/Shared/_student.cshtml";
+      }
+ <script lang="Javascript" type="text/javascript">
+     function validate() {
+         var x = document.forms["login"]["firstname"].value;
+
+         if (x == null || x == "") {
+             alert("firstname must not empty");
+             return false;
+         }
+         var y = document.forms["login"]["lastname"].value;
+         if (y == null || y == "") {
+             alert("lastname must not empty");
+             return false;
+         }
+         var z = document.forms["login"]["username"].value;
+         if (z == null || z == "") {
+             alert("username must not empty");
+             return false;
+         } var a = document.forms["login"]["passwd"].value;
+         if (a == null || a == "") {
+             alert("password must not empty");
+             return false;
+         } var b = document.forms["login"]["passwd2"].value;
+         if (b == null || b == "" || a != b) {
+             alert("password does not matched");
+             return false;
+         }
+
+         return true;
+     }
+
+            </script>
+        
+    @Scripts.Render("~/bundles/jquery")
+        <script>
+
+            $(document).ready(function () {
+
+                
+                 $('#chk').click(function () {
+                    var s = $('#un').val();
+                    $.getJSON("/Student/checkUsername?un=" + s, function (data)
+                    {
+                if (data==true) 
+                 $('#d1').text("User Exists");
+               else 
+                 $('#d1').text("User not Exists");
+
+});
+  });
+
+    });
+
+        </script>
+  
+<h class="title">Sign-Up Form</h><br>
+<form method="post" action="signupform" name="login" onSubmit="return validate()">
+<table>
+<tr><td></td><th> First Name</th><td><input type="text" name= "firstname" size="20"></td></tr>
+<tr><td></td><th> Last Name</th><td><input type="text" name="lastname" size="20"></td></tr><br />
+<div>
+<tr><td></td><th> Username</th> <td><input type="text" name="username" id ="un" size="20"></td>
+    <td><button type=button id="chk">Check</button></td></tr>
+    <tr><td></td><td></td><td><div id="d1"></div></div></td></tr><br/>
+    </tr>
+
+<tr> <td></td><th>Password </th><td><input type="password" name="passwd" size="20"></td></tr>
+<tr> <td></td><th>Confirm Password</th><td><input type="password" name="passwd2" size="20"></td></tr>
+<tr><td></td><th>Gender</th><td></td><th>Marital Status</th></tr><br>
+<tr><td></td><td><input type="radio" name="gender" value="male" checked>Male</td><td></td><td><input type="radio" name="status" value="single" checked>Single</td></tr>
+<tr><td></td><td><input type="radio" name="gender" value="female">Female</td><td></td><td><input type="radio" name="status" value="married">Married</td></tr>
+
+
+<tr><td></td><td></td><th>Select Country</th></tr>
+<tr><td></td><td></td><td><select>
+  <option name="country" value="paksitan" selected>Paksitan</option>
+  <option name="country" value="uae">UAE</option>
+  <option name="country" value="usa">USA</option>
+  <option name="country" value="china">China</option>
+</select></td></tr>
+<tr><td></td><td></td><td></td><td><input type="submit" value="SingUp" />
+
+</td></tr></table></form>
+
+<br>

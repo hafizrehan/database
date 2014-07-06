@@ -1,0 +1,31 @@
+﻿@model MvcApplication.Models.Student
+
+@{
+    ViewBag.Title = "searchaccount1";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+<h2 class="title">Student</h2>
+<form method="post" action="~/Admin/searchaccount">
+
+    <input type="submit" value="Back" class="btn btn-primary pull-center"/>
+</form>
+
+<fieldset>
+    <legend>Student</legend>
+    <table border="1"><tr><th>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Username)
+    </div></th><th>
+         <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div></th></tr><tr><td>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Username)
+    </div>
+        </td><td>
+   
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div></td></tr></table>
+</fieldset>

@@ -1,0 +1,45 @@
+@{
+    ViewBag.Title = "page2";
+
+}
+
+        <script lang="Javascript" type="text/javascript">
+            function validate()
+            {var x=document.forms["login"]["un"].value;
+                
+                    if(x == null || x =="")
+                   {alert("Name must not empty");
+                        return false;
+                    }
+               var y = document.forms["login"]["pwd"].value;     
+                    if(y == null || y =="")
+                    {
+                        alert("password must not empty");
+                        return false;
+                    }
+                
+                    /*if(document.login.pwd.value=="")
+                        {
+                               alert("password must not empty");
+                                 return false;
+                        }*/
+                        return true;
+            }
+            </script>
+
+  
+<h2 class="title">User Login</h2>
+<form method="post" action="/Home/login" name="login" onSubmit="return validate()">
+<div id="d1"></div>
+<table>
+ <tr><td>UserName</td> <td><input type= "text" name="un" id="un"></td></tr><br>
+<tr><td>Password</td><td><input type= "Password" name="pwd" id="pwd"></td></tr> <br>
+<tr><td></td><td></td>
+<td></td><td><input type="radio" name="role" value="admin" checked>Admin</td>
+<td></td><td><input type="radio" name="role" value="teacher">Teacher</td>
+<td></td><td><input type="radio" name="role" value="student">Student</td></tr>
+
+<tr><td></td><td><center><input type="submit" value=" Login " class="btn btn-primary pull-center" ></center></td></tr>
+</table>
+</form>
+

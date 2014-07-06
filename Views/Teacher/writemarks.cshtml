@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MvcApplication.Models.Student1>
+
+@{
+    ViewBag.Title = "writemarks";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+<h2 class="title">Write Marks</h2>
+<form method="post" action="~/Home/teacher">
+ <input type="submit" value="Back" class="btn btn-primary pull-center"/>
+</form>
+
+<form method="post" action="~/Teacher/upmarks">
+
+<table border="1">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name) 
+        </th>
+        <th></th>
+        <th>
+           <center> @Html.DisplayNameFor(model => model.Marks)       </center>   
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+            </td><td></td>       <td>
+                
+
+          <center>
+          <input type="text" name="mrk" value="@Html.DisplayFor(modelItem => item.Marks)" size="9"/>
+          <input type="text" value="@Html.DisplayFor(modelItem => item.Name)" name="tx" hidden="hidden"/>
+          </center>
+        </td>
+        
+    </tr>
+}
+    
+</table>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="submit" value="Add Marks" class="btn btn-primary pull-center"/>
+    </form>

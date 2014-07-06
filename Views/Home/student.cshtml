@@ -1,0 +1,26 @@
+@model MvcApplication.Controllers.HomeController
+@{
+    ViewBag.Title = "student";
+    Layout = "~/Views/Shared/_new.cshtml";
+
+}
+<h1></h1>
+
+<table>
+    <tr><td>
+<form method="post" action="~/student/viewattendance">
+     <input type="text"  value="@ViewBag.st" name="txt" hidden="hidden"/>
+    <input type="submit" value="View Attendance"  class="btn btn-primary pull-center"/>
+</form></td><td>
+<form method="post" action="~/student/viewmarks">
+         <input type="text" value="@ViewBag.st" name="tp" hidden="hidden"/>
+         <input type="submit" value="View Marks" class="btn btn-primary pull-center"/>
+</form></td><td>
+        <form method="post" action="~/student/viewstatus">
+         <input type="text" value="@ViewBag.st" name="tr" hidden="hidden"/>
+        <input type="submit" value="View Status"  class="btn btn-primary pull-center" />
+</form>
+    </td>
+    </tr>
+    </table>
+

@@ -1,0 +1,36 @@
+﻿@model MvcApplication.Models.Student1
+
+@{
+    ViewBag.Title = "viewmarks";
+    Layout = "~/Views/Shared/_student.cshtml";
+
+}
+
+<h2 class="title">View Marks</h2>
+<a href="#" >Press Back-Space</a>
+<fieldset>
+    <legend>Student</legend>
+<table border="1">
+    <tr><td>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+        </td><td><center>
+        <div class="display-label">
+         @Html.DisplayNameFor(model => model.Marks)
+    </div></center>
+        </td></tr>
+    <tr><td><center>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+     </center></td>
+    <td>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Marks)
+    </div></td></tr>
+</table>
+    
+</fieldset>
+

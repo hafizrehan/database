@@ -1,0 +1,30 @@
+﻿@{@model MvcApplication.Controllers.HomeController
+
+    ViewBag.Title = "teacher";
+    Layout = "~/Views/Shared/_new.cshtml";
+
+}
+<form action="~/savefile/save" method="post" enctype="multipart/form-data" >
+
+    Upload Marks File: <input type="file" name="file" class="btn btn-primary pull-center"/>
+ 
+    <input type="submit" value="upload" class="btn btn-primary pull-center"/>
+</form>
+
+<table>
+    <tr><td>
+<form method="post" action="~/Teacher/markattendance">
+    <input type="submit" value="Mark Attendance" class="btn btn-primary pull-center" />
+</form></td><td>
+<form method="post" action="~/Teacher/writemarks">
+    <input type="submit" value="Write Marks" class="btn btn-primary pull-center" />
+</form></td><td>
+        <form method="post" action="~/Teacher/updatestatus">
+        <input type="submit" value="Update Status" class="btn btn-primary pull-center" />
+</form>
+    </td><td>
+        <form method="post" action="/Teacher/searchallstd">
+    <input type="submit" value="Search All Students" id="srstd"  class="btn btn-primary pull-center"   />
+    </form></td>
+    </tr>
+    </table>

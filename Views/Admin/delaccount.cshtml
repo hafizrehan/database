@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "delaccount";
+    Layout = "~/Views/Shared/_student.cshtml";
+
+}
+   
+<form method="post" action="~/Home/admin">
+
+    <input type="submit" value="Back" class="btn btn-primary pull-center"/>
+</form>
+<form method="post" action="/Admin/dellaccount">
+<table>
+    <tr><td></td><td></td><td><input type="radio" name="role" value="teacher" checked>Teacher&nbsp&nbsp
+    </td><td><input type="radio" name="role" value="student" />Student</td></tr>
+    <tr><td>
+    
+    Enter UserName <input type="text" name="n" />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp<input type="submit" value="Delete" class="btn btn-primary pull-center"/>
+</td></tr>
+    </table>
+    </form>
