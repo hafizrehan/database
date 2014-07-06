@@ -18,18 +18,18 @@ a:hover {
 	text-decoration: underline;
 }
 .main {
-	width: 1200px;
+	width: 1275px;
 	margin: 0px auto;
 }
 .page {
 	background-color: #000000;
-	width: 1200px;
+	width: 1275px;
         hight:auto;
 	float: center;
 	padding: 20px;
 }
 .header {
-	width: 1200px;
+	width: 1275px;
 	float: left;
 }
 .header-img {
@@ -37,7 +37,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: left top;
 	text-align: right;
-	width: 1200px;
+	width: 1275px;
 	height: 249px;
 	float: left;
 }
@@ -60,7 +60,7 @@ a:hover {
 }
 .menu {
 	background-color: #333333;
-	width: 1200px;
+	width: 1275px;
 	height: 51px;
 	float: left;
 }
@@ -83,7 +83,7 @@ a:hover {
 	color: #4BC4EF;
 }
 .content {
-	width: 1200px;
+	width: 1275px;
 	float: left;
 	padding-top: 12px;
 }
@@ -143,7 +143,7 @@ a:hover {
 }
 .footer {
 	background-color: #333333;
-	width: 1200px;
+	width: 1275px;
 	height: 55px;
 	margin-top: 250px;
         float: left;
